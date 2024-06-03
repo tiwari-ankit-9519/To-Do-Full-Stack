@@ -7,7 +7,7 @@ const CreateTodo = () => {
 
   async function postTodos() {
     try {
-      const response = await fetch("http://localhost:4000/todos", {
+      const response = await fetch("http://localhost:4000/todo", {
         method: "POST",
         body: JSON.stringify({
           title,

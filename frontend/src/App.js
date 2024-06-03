@@ -9,10 +9,10 @@ const App = () => {
     setInterval(() => {
       fetch("http://localhost:4000/todos").then(async (res) => {
         const json = await res.json();
-        setTodos(json);
+        setTodos(json.todos);
       });
     }, 2000);
-  });
+  }, []);
 
   return (
     <>
